@@ -28,3 +28,20 @@ def test_bubble_sort_invalid():
     result = Lab3.bubble_sort(input_arr, 3)
 
     assert (result == [])
+
+def test_moreorequal10():
+    input_arr = [22,44,23,34,34,24,23,24,34,35,46,45]
+
+    result = Lab3.bubble_sort(input_arr,Lab3.SORT_ASCENDING)
+    assert (result == 1)
+
+def test_empty():
+    input_arr = []
+
+    result = Lab3.bubble_sort(input_arr,Lab3.SORT_ASCENDING)
+    assert (result == 0)
+
+def test_notint():
+    input_arr = ['s',23,23.4]
+    result = Lab3.bubble_sort(input_arr,0)
+    assert (result == 2)
